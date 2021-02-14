@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analogue Watch</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main">
+        <div class="toggle-switch">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div> 
+        <span>           
+              <button class="btn" id="toggleBtn"> 
+                  <i class="far fa-clock"></i>
+              </button>
+          </span>
+        <div class="main-container">
+            <div class="container" id="container">
+                <div class="box">
+                    <div class="hours">
+                        <h1 id="hours"></h1>
+                    </div>
+                    <h1>hrs</h1>
+                </div>
+                <div class="box">
+                    <div class="minutes">
+                        <h1 id="minutes"></h1>
+                    </div>
+                    <h1>mins</h1>
+                </div>
+                <div class="box">
+                    <div class="seconds">
+                        <h1 id="seconds"></h1>
+                    </div>
+                    <h1>secs</h1>
+                </div>
+                <div class="box">
+                    <div class="amorpm">
+                        <h1 id="amorpm"></h1>
+                    </div>
+                    <h1>AM/PM</h1>
+                </div>
+
+             </div>
+            <div class="clock" id="clock">
+                <div class="hour">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
+            </div>     
+        </div>
+
+    </div>
+    
+    
+
+<script src="index.js"></script>   
+</body>
+</html>

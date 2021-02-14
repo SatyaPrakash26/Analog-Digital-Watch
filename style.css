@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --text:#777777;
+    --main-color: #cebbbc;
+    --min-hand:#091921;
+    --toggle-color:#091921;  
+    --box-shadow: -8px -8px 15px rgba(206, 187, 188, 0.5),
+                  10px 10px 10px rgba(0, 0, 0, 0.1),
+                  inset -8px -8px 15px rgba(206, 187, 188, 0.5),
+                  inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.dark-mode{
+    --text:#fff;
+    --main-color: #091921;
+    --toggle-color:#fff;
+    --min-hand:#fdfa66;
+    --box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+                  20px 20px 20px rgba(0, 0, 0, 0.3),
+                  inset -8px -8px 15px rgba(255, 255, 255, 0.05),       
+                  inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+body{
+    min-height: 100vh;
+    background: var(--main-color);
+    overflow: hidden;
+}
+.main{
+    width: 70%;
+    margin: 0 auto;
+}
+/* dark-theme-switch-button */
+.label {
+    margin-left: 90%;
+    background-color: var(--toggle-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.checkbox {
+    opacity: 0;
+}
+
+.ball {
+    position: absolute;
+    background-color: var(--main-color);
+    height: 22px;
+    width: 22px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+/* digitial-watch-switch-theme */
+
+span{
+    position: absolute;
+    top: 1rem;
+}
+span .btn{
+    font-size: 2rem;
+    border: none;
+    color: var(--toggle-color);
+    background-color: var(--bg);
+    cursor: pointer;
+    outline: none;
+}
+
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+/* digital clock styling */
+.container {
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.box {
+    text-align: center;
+}
+
+.hours,
+.minutes,
+.seconds,
+.amorpm {
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--main-color);
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+#hours,
+#minutes,
+#seconds,
+#amorpm {
+    font-size: 2em;
+    color: var(--text);
+    text-transform: uppercase;
+    font-family: 'Lexend Mega',
+    sans-serif;
+}
+
+.box>h1 {
+    font-size: 1em;
+    color: var(--text);  
+    font-family: 'Patrick Hand',
+    cursive;
+    text-transform: uppercase;
+}
+
+
+
+/* analog clock styling */
+
+.clock{ 
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(clock.png);
+    background-size: cover;
+    border:4px solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+.clock:before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background:#fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position: absolute;
+}
+.clock .hour, .hr{
+    width: 160px;
+    height: 160px;
+}
+.clock .min, .mn{
+    width: 190px;
+    height: 190px;
+}
+.clock .sec, .sc{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr:before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background:#ff105e;
+    z-index:10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: var(--min-hand);
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.sc:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #1ac0c6;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+.toggle-class{
+    display: none;
+}
