@@ -29,12 +29,13 @@
 
 
 body{
-    min-height: 100vh;
+    min-height: 100%;
     background: var(--main-color);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .main{
     width: 70%;
+    height: 70%;
     margin: 0 auto;
 }
 /* dark-theme-switch-button */
@@ -98,8 +99,8 @@ span .btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    
+    height: 100%;
+    margin: 10em auto;
 }
 
 /* digital clock styling */
@@ -236,4 +237,10 @@ span .btn{
 
 .toggle-class{
     display: none;
+}
+
+@media screen and (max-width:1024px){
+    .main-container{
+        margin:2em 0;
+    }
 }
